@@ -1,0 +1,54 @@
+
+
+
+<div class="container">
+ 
+  <form action=""   class="col-md-4 mx-auto bg-light p-4" (submit)="checkdata()"  #heroForm="ngForm">
+
+ 
+
+    <label for="">დასახელება</label>
+      <input type="email" class="form-control"   name="name" [(ngModel)]="inputs.name" #name="ngModel"  required  id=""> 
+ 
+    <div *ngIf="name.invalid && (name.dirty || name.touched)"
+    class="alert alert-danger">  
+
+
+ <div *ngIf="name.errors?.required">
+    სავალდებულო ველი
+  </div> 
+
+  <div *ngIf="name.errors?.minlength">
+   ველში სიმბოლოების რაოდენობა უნდა იყოს 5 მეტი
+  </div>
+
+  <div *ngIf="name.errors?.type">
+    შეიყვანეთ @ სიმბოლო
+   </div>
+
+  <div *ngIf="name.errors?.maxlength">
+    ველში სიმბოლოების რაოდენობა არ უნდა აღემატებოდეს 15
+   </div>
+ 
+</div> 
+
+    <!-- <label for="">ელ:ფოსტა</label>
+    <input type="email" class="form-control" name="" formControlName="email" id="">
+
+    <label for="">ტელ:ნომერი</label>
+    <input type="text" class="form-control" name="" formControlName="phone" id="">
+
+    <label for="">სათაური</label>
+    <input type="text" class="form-control" name="" formControlName="subject" id="">
+
+    <label for="">სრული ტექსტი</label>
+    <textarea class="form-control mb-3" name="" formControlName="Text" id=""> </textarea>-->
+  <button class="btn btn-success" type="submit" [disabled]="!heroForm.valid">გაგზავნა</button> 
+  </form>
+ 
+
+
+
+  </div>
+
+ 

@@ -1,0 +1,39 @@
+ .container{
+   width: 1200px;
+   margin: auto;
+ }
+
+
+
+
+*{
+    box-sizing: border-box;
+}
+
+nav{
+    padding: 7px;
+    top: 0;
+    margin-bottom: 80px;   
+    position: fixed;
+    width: 100%;
+
+    a{
+        text-decoration: none;
+        padding: 7px;
+        color: #fff;
+    }
+}
+ 
+
+.row{
+    display: flex;
+     flex-wrap: wrap;
+
+     .col-4{
+         width: 33.33333%;
+         padding: 15px;
+         img{
+             max-width: 100%;
+         }
+     }
+}

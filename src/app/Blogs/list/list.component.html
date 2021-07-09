@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 mb-4" *ngFor="let Blog of Blogs">
+            <div class="card">
+                <img [src]="Blog.img" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{Blog.title}}</h5>
+                   
+                  <a [routerLink]="['/Blogs/detals/' + Blog.id]"  class="btn btn-primary">სრულად ნახვა</a>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+ 
